@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/api/forecast/{latlng}",
+            "lambdaFunction": "forecast",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/api/forecast/*"
+        }
+    ],
+    "resourceName": "forecast",
+    "apiName": "forecast",
+    "functionArns": [
+        {
+            "lambdaFunction": "forecast"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-weatherapp2-dev-142420-authRole",
+        "unAuthRoleName": "amplify-weatherapp2-dev-142420-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "forecast",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
