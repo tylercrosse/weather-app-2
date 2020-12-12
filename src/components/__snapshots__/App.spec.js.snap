@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should receive the correct props from state 1`] = `
+Object {
+  "locations": Object {},
+  "ui": Object {},
+  "weather": Object {
+    "address": "Seattle, WA",
+  },
+}
+`;
+
+exports[`no conditionals 1`] = `
+<div
+  className="App"
+>
+  <CurrentWeather
+    fetchForecast={[Function]}
+    geocode={[Function]}
+    hideSearch={[Function]}
+    locations={Object {}}
+    showSearch={[Function]}
+    ui={Object {}}
+    weather={
+      Object {
+        "address": "Seattle, WA",
+      }
+    }
+  />
+  <Connect(Component) />
+</div>
+`;
+
+exports[`with current weather 1`] = `
+<div
+  className="App"
+>
+  <CurrentWeather
+    fetchForecast={[Function]}
+    geocode={[Function]}
+    hideSearch={[Function]}
+    locations={Object {}}
+    showSearch={[Function]}
+    ui={Object {}}
+    weather={
+      Object {
+        "address": "Seattle, WA",
+        "currently": Object {
+          "icon": "fog",
+          "temperature": 73,
+        },
+      }
+    }
+  />
+  <Connect(Component) />
+</div>
+`;
+
+exports[`with forecast 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="search-no_current"
+  >
+    <SearchBar
+      geocode={[Function]}
+    />
+  </div>
+</div>
+`;
+
+exports[`with recent searches 1`] = `
+<div
+  className="App"
+>
+  <CurrentWeather
+    fetchForecast={[Function]}
+    geocode={[Function]}
+    hideSearch={[Function]}
+    locations={
+      Object {
+        "ChIJVTPokywQkFQRmtVEaUZlJRA": Object {
+          "address": "Seattle, WA, USA",
+          "id": "ChIJVTPokywQkFQRmtVEaUZlJRA",
+          "lat": 47.6062095,
+          "lng": -122.3320708,
+          "time": 1499098513,
+        },
+        "ChIJW-T2Wt7Gt4kRKl2I1CJFUsI": Object {
+          "address": "Washington, DC, USA",
+          "id": "ChIJW-T2Wt7Gt4kRKl2I1CJFUsI",
+          "lat": 38.9071923,
+          "lng": -77.03687070000001,
+          "time": 1499061460,
+        },
+      }
+    }
+    showSearch={[Function]}
+    ui={Object {}}
+    weather={
+      Object {
+        "address": "Seattle, WA",
+      }
+    }
+  />
+  <Connect(Component) />
+</div>
+`;

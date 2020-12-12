@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is app was built in my spare time over a week as part of a coding challenge. I'm currently looking for a new position in Seattle - Hire me!
 
-## Available Scripts
+<div align="center">
+  <img src="https://cdn.rawgit.com/tylercrosse/weather-app/a379810e/public/weather-app.jpg" alt="preview image">
+</div>
 
-In the project directory, you can run:
+---
+### Demo
 
-### `yarn start`
+You can test a fully working live demo at http://calm-forecast.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
+### Major features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Current & forecasted weather for any location. Weather data from the [dark sky api](https://darksky.net/dev/).
+- Location search with autocomplete, with help from the [google places service](https://developers.google.com/maps/documentation/geocoding/intro).
+- Charts showing forecasted weather for the next week & the weather that already occurred today.
+- Search history stored in session.
 
-### `yarn test`
+---
+### Wish List
+The things I would like to do if I had more time
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ ] Better test coverage
+- [ ] Responsive design
+- [ ] More complete PWA support
+- [ ] Push deployment to cloud service (probably Digital Ocean or AWS)
+- [ ] Display additional data
 
-### `yarn build`
+---
+### Built with
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### <img height="20" src="https://cdn.rawgit.com/tylercrosse/gitter-clone/9c26fc47/src/client/assets/img/react.svg"> [React](https://facebook.github.io/react/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React makes it really easy to focus on the view in a declarative way. I like that it makes it easy to write composable, testable UI. Visualizatin handled by [react vis](https://github.com/uber/react-vis), a d3 powered react component library.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### <img height="20" src="https://cdn.rawgit.com/tylercrosse/gitter-clone/9c26fc47/src/client/assets/img/redux.svg"> [Redux](http://redux.js.org/)
 
-### `yarn eject`
+Redux is where the fun is at. It was used to manage state across the application in a predictable imperative way. [Redux devtools](https://github.com/zalmoxisus/redux-devtools-extension) are also great, I kept it enabled on production for anyone wanting to easily take a look at the app's state. [Redux persist](https://github.com/rt2zz/redux-persist) allowed the state to be easily persisted across browser sessions.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+##### <img height="20" src="https://cdn.rawgit.com/tylercrosse/gitter-clone/9c26fc47/src/client/assets/img/webpack.svg"> [Webpack 2](https://webpack.js.org/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Fantastic code bundler once you get past the learning curve. I use it for a number of things including: transpile ES2015+ javascript to ES5 with [Babel](https://babeljs.io/), compile [Sass](http://sass-lang.com/) into css, optimize assets, hot reload code, build minimized split production code, + more.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+##### <img height="20" src="https://cdn.rawgit.com/tylercrosse/gitter-clone/9c26fc47/src/client/assets/img/express.svg"> [Express](https://expressjs.com/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+It's nice to have JS everywhere. Express is fast and minimal. The backend is pretty simple with a router, a few controllers, and basic http requests to cross origin resources.
 
-## Learn More
+##### <img height="20" src="https://cdn.rawgit.com/tylercrosse/gitter-clone/9c26fc47/src/client/assets/img/jest.svg"> [Jest](http://facebook.github.io/jest/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Unit tests run by Jest. If you haven't seen Jest recently, you should take another look. [Enzyme](https://github.com/airbnb/enzyme) is used for React support and [SuperTest](https://github.com/visionmedia/supertest) is used for HTTP assertions. [Enzyme-to-JSON](https://github.com/adriantoine/enzyme-to-json) is also great and worth checking out in conjunction with the other test utilities.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+### Setup
 
-### Code Splitting
+If you don't have [yarn](https://yarnpkg.com/en/) commands can be run with `npm`. First, clone and cd into the repo and install the dependencies.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```sh
+$ git clone https://github.com/tylercrosse/gitter-clone.git
+$ cd gitter-clone
+$ yarn install
+```
 
-### Analyzing the Bundle Size
+Additional commands:
+##### `yarn dev`
+- Start development server on `127.0.0.1:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##### `yarn build`
+- Build a production version of the app.
 
-### Making a Progressive Web App
+##### `yarn start`
+- Start production server on `127.0.0.1:3000` to serve built app. Requires the build command to have already been run.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+##### `yarn test`
+- Run all of the projects tests using jest.
 
-### Advanced Configuration
+##### `yarn lint`
+- Lint all of the projects javascript files using eslint.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
+### Contributing
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for your interest! Unfortunately, I'm not currently taking contributions.
