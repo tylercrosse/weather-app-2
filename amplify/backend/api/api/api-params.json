@@ -9,8 +9,8 @@
             "policyResourceName": "/api/forecast/*"
         }
     ],
-    "resourceName": "forecast",
-    "apiName": "forecast",
+    "resourceName": "api",
+    "apiName": "api",
     "functionArns": [
         {
             "lambdaFunction": "forecast"
@@ -19,8 +19,8 @@
     "privacy": {
         "auth": 0,
         "unauth": 0,
-        "authRoleName": "amplify-weatherapp2-dev-142420-authRole",
-        "unAuthRoleName": "amplify-weatherapp2-dev-142420-unauthRole"
+        "authRoleName": "amplify-weatherapp2-dev-162730-authRole",
+        "unAuthRoleName": "amplify-weatherapp2-dev-162730-unauthRole"
     },
     "dependsOn": [
         {

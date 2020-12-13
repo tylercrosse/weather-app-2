@@ -68,7 +68,7 @@
         "Layers": [],
         "Timeout": "25",
         "Code": {
-          "S3Bucket": "amplify-weatherapp2-dev-142420-deployment",
+          "S3Bucket": "amplify-weatherapp2-dev-162730-deployment",
           "S3Key": "amplify-builds/forecast-58303954614959316f57-build.zip"
         }
       }
@@ -79,12 +79,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "weatherapp2LambdaRole80e45e8a",
+            "weatherapp2LambdaRolee4c28db5",
             {
               "Fn::Join": [
                 "",
                 [
-                  "weatherapp2LambdaRole80e45e8a",
+                  "weatherapp2LambdaRolee4c28db5",
                   "-",
                   {
                     "Ref": "env"
